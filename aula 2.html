@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2 Javascrpit </title>
+
+    <style type="text/css">
+        #cor {
+            color: red;
+        }
+    </style>
+    <script language="javascript">
+        var str = "Hello";
+        var chars = [...str];
+        console.log(chars);
+
+        var nome = 'Ana Júlia';
+        var sobrenome = 'sentinella';
+        var condicao = "acabada";
+        var idade = 16;
+
+        console.log("Meu nome é " + nome + '' + sobrenome + ". Eu tenho " + idade + "anos" + " e eu estou" + condicao + ".");
+
+        console.log(`meu nome é ${nome} ${sobrenome}. Eu tenho ${idade} anos, e eu estou ${condicao}`);
+
+        var texto = "mergulhando em tecnologia da informação";
+        console.log(texto.substr(0, 11));
+
+        texto = "unicamp";
+        console.log("Tamanho:" + texto.length);
+        console.log(texto.toUpperCase());
+        console.log(texto.toLowerCase());
+
+        console.log("--------CharAt()-------");
+        console.log(texto.charAt(3));
+
+        console.log("----------Split()--------");
+        texto = "23/10/2002";
+        var aux = texto.split("/");
+        console.log(aux);
+
+        if (aux[1] == '10') {
+            var mes = ' Outubro';
+        }
+
+        console.log('Limeira, ' + aux[0] + 'de' + mes + 'de ' + aux[2]);
+
+        var texto2 = "COTIL-UNICAMP-LIMEIRA";
+
+        console.log("---------indexOf---------");
+        console.log(texto2.indexOf('Limeira'));
+
+        var nomeTeste = 'Simone';
+        console.log(nomeTeste.startsWith('Si'))
+        console.log(nomeTeste.endsWith('ni'))
+
+        var nome = "Andre";
+        var comunicado = "Olá sr nome do usuario informamos q infelizmente vc foi corno, lamentamos por vossa senhoria  e lhe oferecemos um plano de polimento do seu chifre gratuito por 6 meses. Esperamos q logo o senhor retorne a suas ativdades romanticas com esse trauma ja superado";
+        console.log(comunicado.replace("nomeusuario", nome));
+
+        var login = "   AnaSentinellaTrabalhoEscravo@gmail.com      ";
+        let loginSemEspaco = login.trim();
+        console.log(loginSemEspaco);
+
+        //ARRAY
+
+        var a = new Array(10);
+        a[0] = "xyz";
+        a[1] = true;
+        a[2] = 1.5;
+        console.log(a);
+
+
+        var nomes = ['Felipe'];
+        console.log("-----Array inicial-----------");
+        console.log(nomes);
+        console.log(nomes.length);
+
+
+        //adicionar um elemento ao final do Array 
+        nomes.push('Kennedy');
+        console.log("-----------------");
+        console.log(nomes);
+        console.log(nomes.length);
+
+        console.log("-------------------");
+        console.log(typeof nomes);
+
+        nomes.push(12);
+        nomes.push(false);
+        console.log("-------------------");
+
+        nomes.unshift('Ana');
+        console.log(nomes);
+
+        delete nomes[1];
+        console.log(nomes);
+
+        var nome = nomes.pop();
+        console.log("ELemento removido:" + nome);
+        console.log(nomes);
+
+        nome = nomes.shift();
+        console.log("elemento removido: " + nome);
+
+        var test =m [1,2,3,4];
+        test.splice(2,1);
+        console.log(test);
+
+        var multidimencional = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+        console.log("--- Array de Array");
+        console.log(multidimencional);
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
