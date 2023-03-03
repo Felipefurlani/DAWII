@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 4</title>
+
+    <style type="text/css">
+  #body{
+   background-color: blanchedalmond;
+   color: black;
+   height: 100%;
+   text-decoration: overline;
+   padding-top: 8px;
+   padding-right: 5px;
+
+  }
+  #data{
+    border-color: aqua;
+    color: antiquewhite;
+    background-color: bisque;
+    text-decoration: dotted;
+    text-align: right;
+  }
+
+    </style>
+
+    <script type="text/javascript">
+        var hoje = new Date();
+        console.log(hoje);
+        console.log(typeof hoje);
+
+        var dataPassada = new Date("01/22/1994 15:23:35");
+        console.log(dataPassada);
+        console.log(typeof dataPassada);
+
+        var data1 = new Date("25 jul 2017 15:29:40");
+        console.log(data1);
+        console.log(typeof data1);
+
+        var data2 = new Date(1884, 0, 22, 15, 23, 35);
+        console.log(data2);
+        console.log(typeof data2);
+
+        var hoje2 = new Date();
+        console.log(hoje2);
+        var dia = hoje2.getDate();
+        var mes = hoje2.getMonth();
+        var ano = hoje2.getFullYear();
+        var diaSemanaNum = hoje2.getDay();
+
+        var Semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sabado"];
+        var DiaSemanaTextual = semana[diaSemanaNum];
+
+        var meses = ["janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+        var mesTextual = meses[mes];
+
+        var hora = hoje2.getHours();
+        var min = hoje2.getMinutes();
+        var seg = hoje2.getSeconds();
+
+        console.log(`${DiaSemanaTextual},${Dia} de ${mesTextual} de ${ano} - ${hora}:${min}:${seg}`);
+
+        var datax = new Date("10/04/2022");
+        var datay = new Date("10/05/2022");
+
+        if (datax.getTime() === datay.getTime()) {
+            alert("Datas iguais!");
+        }
+
+
+        if (+datax === +datay) {
+            alert("Datas iguais!");
+        } else {
+            alert("Datas diferentes!");
+
+        }
+
+        if (datax < datay); {                                
+            alert("DataX é menor que dataY ");
+        }
+
+        if (datax > datay); {
+            alert("A data inicial é > que a data final ");
+        }
+    </script>
+</head>
+
+<body id="body" onload=escreveData();>
+    <div id="data"></div>
+    <span id="saudacao"></span>
+
+
+</body>
+
+</html>
