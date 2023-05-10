@@ -13,24 +13,24 @@
       var altura = document.getElementById("altura").value;
 
       if ( (peso.trim() == "")  ) {
-        document.getElementById("msgPeso").textContent= "informe o peso";
-        document.getElementById("msgPeso").style.color= "red";
-        document.getElementById("msgPeso").style.fontWeight= "bold";
-        document.getElementById("msgPeso").style.fontSize= "12px";
+        document.querySelector("#msgPeso").textContent= "informe o peso";
+        document.querySelector("#msgPeso").style.color= "red";
+        document.querySelector("#msgPeso").style.fontWeight= "bold";
+        document.querySelector("#msgPeso").style.fontSize= "12px";
         exit();
        } else{
-            document.getElementById("msgPeso").textContent="";
+            document.querySelector("#msgPeso").textContent="";
         }
         
       
         if ((altura.trim() == "") ) {
-        document.getElementById("msgAltura").textContent= "informe a altura";
-        document.getElementById("msgAltura").style.color= "red";
-        document.getElementById("msgAltura").style.fontWeight= "bold";
-        document.getElementById("msgAltura").style.fontSize= "12px";
+        document.querySelector("#msgAltura").textContent= "informe a altura";
+        document.querySelector("#msgAltura").style.color= "red";
+        document.querySelector("#msgAltura").style.fontWeight= "bold";
+        document.querySelector("#msgAltura").style.fontSize= "12px";
         exit();
        } else{
-            document.getElementById("msgAltura").textContent="";
+            document.querySelector("#msgAltura").textContent="";
         }
     
        

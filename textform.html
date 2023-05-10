@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+
+
+        function VerificaTipo(tipo) {
+            if (tipo == "PF") {
+                document.getElementById("cpf").style.display = "inline";
+                document.getElementById("cnpj").style.display = "none";
+            } else if (tipo == "PJ") {
+                document.getElementById("cpf").style.display = "none";
+                document.getElementById("cnpj").style.display = "inline";
+            }
+        }
+        function enviardados() {
+            if ((document.dados.tipo.value == "PF") && (document.dados.tipo.value == "") || (document.dados.tx_nome.value.length < 8)) {
+                formatMsg("Preencha campo NOME corretamente");
+                document.dados.tx_nome.focus();
+                return false;
+            }
+            if ((document.dados.tipo.value == "PJ") && (document.dados.tipo.value == "") || (document.dados.tx_rz.value.length < 50)) {
+                formatMsg("Preencha campo NOME corretamente");
+                document.dados.tx_nome.focus();
+                return false;
+            }
+        }
+
+        function formatMsg() {
+
+        }
+    </script>
+</head>
+
+<body onload="VerificaTipo('PF');">
+    <h1>Faça Seu Cadastro</h1>
+
+    <div id="msg"></div>
+    <form method="post" name="dados" id="dados" onsubmit="return enviardados();">
+        Pessoa fisíca
+        <input type="radio" name="tipo" id="PF" value="PF" onclick="VerificaTipo(this.value)">
+
+        Pessoa Juridica
+        <input type="radio" name="tipo" id="PJ" value="PJ" onclick="VerificaTipo(this.value)">
+        <br>
+        <div id="cpf">
+            <br>
+            CPF: <br>
+            <input type="text" name="tx_cpf" id="tx_cpf" size="20" maxlength="14">
+            <br><br>
+            Nome Completo: <br>
+            <input type="text" name="tx_nome" id="tx_nome" size="52" maxlength="50">
+        </div>
+
+        <div id="cnpj">
+            <br>
+            CNPJ: <br>
+            <input type="text" name="tx_cnpj" id="tx_cnpj" size="20" maxlength="18">
+            <br><br>
+            Razão Social: <br>
+            <input type="text" name="tx_rz" id="tx_rz" size="52" maxlength="50">
+        </div>
+        <br><br>
+        E-Mail: <br>
+        <input type="text" name="tx_email" id="tx_email" size="52" maxlength="50">
+        <br><br>
+        Mensagem: <br>
+        <textarea name="tx_mensagem" id="tx_mensagem" cols="53" rows="8"></textarea>
+
+        <br><br>
+        <input name="submit" value="Enviar dados">
+
+        <input type="Reset" type="reset" value="redefinir">
+
+    </form>
+
+</body>
+
+</html>

@@ -1,3 +1,4 @@
+
 <?php 
 
 $str = "Informática/Edificações/Enfermagem";
